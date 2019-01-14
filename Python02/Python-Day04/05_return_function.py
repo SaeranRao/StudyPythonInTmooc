@@ -6,11 +6,7 @@ def get_fx():
         return min
     elif s == '求和':
         return sum
-
 L = [2,4,6,8,10]
-
 print(L)
-
 f1 = get_fx()
-
 print(f1(L))
