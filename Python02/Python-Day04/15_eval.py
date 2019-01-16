@@ -1,9 +1,8 @@
 x = 100
 y = 200
-#a = eval('x+y;x-y')
-a = exec('x+y;x-y')
-# print(a)
-# exec('x=100')
-# exec('y=200')
-# exec('z=x+y')
-# print (z)
+s = 'print(x,y,x+y)'
+
+exec(s) # 100 200 300
+exec(s,{'x':10,'y':20}) # 10 20 30
+exec(s,{'x':10},{'x':1,'y':2}) # 1 2 3
+exec(s,{'x':10},{'y':2}) # 10 2 12
