@@ -10,7 +10,7 @@ def mydeco(fn):
 def myfunc():
     print("myfunc被调用")
 
-mydeco(myfunc)
-myfunc = mydeco(myfunc)
-myfunc()
+# mydeco(myfunc)
+# myfunc = mydeco(myfunc)
+# myfunc()
 myfunc()
