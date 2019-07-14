@@ -2,8 +2,8 @@
 #import socket
 from socket import *
 
-HOST = '10.34.10.48'
-PORT = 8888
+HOST = '192.168.88.108'
+PORT = 9999
 ADDR = (HOST,PORT)
 BUFFERSIZE = 1024
 
@@ -14,13 +14,14 @@ sockfd.bind(ADDR)
 #建立套接字监听
 sockfd.listen(5)
 
-print("wait for connect.....")
 
 while True:
     #等待客户端请求
+    print("wait for connect.....")
     conn,addr = sockfd.accept()
     print("connect from ",addr)
     while True:
+        print("wait message.....")
         #消息的收发
         data = conn.recv(BUFFERSIZE)
         if not data:
